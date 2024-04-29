@@ -1,0 +1,95 @@
+body {
+    font-family: 'PT Sans', sans-serif; /* Підключений шрифт PT Sans */
+    font-size: 14px; /* Розмір шрифту 14px */
+    line-height: 22px; /* Міжстрокова відстань 22px */
+    color: dimgrey; /* Колір тексту, який відповідає макету */
+}
+
+.header-background {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 10px; /* Додає верхній та нижній внутрішній відступ 50px та 10px по боках */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blok-header-logo {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blok-header-data {
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.blok-date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.blok-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.blok-hed {
+    display: flex;
+    align-items: center;
+}
+
+.img-logo {
+    padding: 10px;
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tel {
+    font-size: 36px;
+}
+
+.tel-text {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tel-text-line {
+    font-weight: bold;
+    border-bottom: 2px dashed black;
+}
+
+@media screen and (max-width: 768px) {
+    .header-background {
+        padding: 30px 10px;
+    }
+
+    .header-container {
+        max-width: 100%;
+    }
+
+    .blok-header-logo,
+    .blok-header-data {
+        width: 100%;
+        justify-content: center;
+    }
+}
