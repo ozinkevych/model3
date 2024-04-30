@@ -48,8 +48,10 @@ body {
 .company-name-op{
     margin: 15px 0;
 }
-.tel{
-
+.tel a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: dimgrey;
     font-size: 38px;
 }
 .tel-text {
