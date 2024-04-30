@@ -1,8 +1,8 @@
 body {
-    font-family: 'PT Sans', sans-serif; /* Підключений шрифт PT Sans */
-    font-size: 14px; /* Розмір шрифту 14px */
-    line-height: 22px; /* Міжстрокова відстань 22px */
-    color: dimgrey; /* Колір тексту, який відповідає макету */
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: dimgrey;
 }
 
 .header-background {
@@ -59,6 +59,11 @@ body {
     display: inline;
     border-bottom: 1px dashed;
 }
+a.tel {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: dimgrey;
+}
 @media screen and (max-width: 600px) {
     .header-background {
         flex-direction: column;
@@ -70,9 +75,9 @@ body {
     .blok-header-data{
         display: flex;
         justify-content: center;
-        margin: 10px auto; /* Центрування блоків */
+        margin: 10px auto;
         text-align: center;
-        align-items: center; /* Додано цей рядок */
+        align-items: center;
     }
 
     .company-name,
@@ -90,11 +95,11 @@ body {
     }
 
     .blok-header-logo {
-        margin-left: auto; /* Забираємо лівий відступ */
+        margin-left: auto;
     }
 
     .blok-header-data {
-        margin-right: auto; /* Забираємо правий відступ */
+        margin-right: auto;
     }
 }
 
