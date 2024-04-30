@@ -56,13 +56,11 @@ body {
     text-align: right;
 }
 .tel-text-line {
-    display: inline;
-    border-bottom: 1px dashed;
-}
-a.tel {
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     color: dimgrey;
+    display: inline;
+    border-bottom: 1px dashed;
 }
 @media screen and (max-width: 600px) {
     .header-background {
