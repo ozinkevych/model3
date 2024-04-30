@@ -7,89 +7,103 @@ body {
 
 .header-background {
     width: 100%;
-    max-width: 1000px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 50px 10px; /* Додає верхній та нижній внутрішній відступ 50px та 10px по боках */
+    padding: 10px;
     display: flex;
     justify-content: space-between;
-}
-
-.header-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    height: 250px;
 }
 
 .blok-header-logo {
-    width: 48%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-left: 110px;
 }
 
 .blok-header-data {
-    width: 48%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    margin-top: 40px;
+    margin-right: 110px;
 }
-
-.blok-date {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-}
-
-.blok-logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-}
-
-.blok-hed {
+.blok-header-logo{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-
-.img-logo {
-    padding: 10px;
+.blok-company-name{
+    margin-left: 10px;
+    width: 140px;
 }
-
-.company-name {
+.company-name{
     font-weight: bold;
-    font-size: 20px;
-}
+    font-size: 24px;
 
-.tel {
-    font-size: 36px;
 }
-
-.tel-text {
-    display: flex;
-    justify-content: flex-end;
-}
-
+.tel,
 .tel-text-line {
-    font-weight: bold;
-    border-bottom: 2px dashed black;
+    margin: 20px 0;
 }
+.company-name,
+.company-name-op{
+    margin: 15px 0;
+}
+.tel{
 
-@media screen and (max-width: 768px) {
+    font-size: 38px;
+}
+.tel-text {
+    text-align: right;
+}
+.tel-text-line {
+    display: inline;
+    border-bottom: 1px dashed;
+}
+@media screen and (max-width: 600px) {
     .header-background {
-        padding: 30px 10px;
-    }
-
-    .header-container {
-        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
     .blok-header-logo,
-    .blok-header-data {
-        width: 100%;
+    .blok-header-data{
+        display: flex;
         justify-content: center;
+        margin: 10px auto; /* Центрування блоків */
+        text-align: center;
+        align-items: center; /* Додано цей рядок */
+    }
+
+    .company-name,
+    .company-name-op,
+    .tel,
+    .tel-text-line,
+    .tel-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .tel {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .blok-header-logo {
+        margin-left: auto; /* Забираємо лівий відступ */
+    }
+
+    .blok-header-data {
+        margin-right: auto; /* Забираємо правий відступ */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .blok-header-logo {
+        margin-left: 40px;
+    }
+
+    .blok-header-data {
+        margin-right: 40px;
     }
 }
