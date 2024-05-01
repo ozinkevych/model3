@@ -7,6 +7,7 @@ body {
 
 .header-background {
     width: 100%;
+    background-color: azure;
     max-width: 980px;
     margin: 0 auto;
     padding: 10px;
@@ -64,51 +65,127 @@ body {
     display: inline;
     border-bottom: 1px dashed;
 }
-@media screen and (max-width: 600px) {
-    .header-background {
-        flex-direction: column;
-        align-items: center;
+.menu-background {
+   width: auto;
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    background-color: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    width: 980px;
+    margin: 0 auto;
+    padding: 0px 10px
+}
+
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.main-menu li {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.main-menu li a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    font-size: 24px;
+}
+.main-menu li:not(:last-child) {
+    border-right: 2px solid white;
+    padding-right: 20px;
+}
+
+.main-menu li:last-child {
+    padding-right: 0;
+}
+.burger-menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .header-background,
+    .menu-background {
+        width: 100%;
+        max-width: 768px;
+        height: auto;
         padding: 20px;
+        flex-direction: column;
     }
 
     .blok-header-logo,
-    .blok-header-data{
+    .blok-header-data {
         display: flex;
         justify-content: center;
-        margin: 10px auto;
-        text-align: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    /* Приховуємо основне меню на менших екранах */
+    .main-menu {
+        display: none;
+    }
+    /* Показуємо бургер-меню на менших екранах */
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        justify-content: center;
+
     }
 
-    .company-name,
-    .company-name-op,
-    .tel,
-    .tel-text-line,
-    .tel-text {
-        font-size: 12px;
-        line-height: 18px;
+    .burger-icon {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+
     }
 
-    .tel {
-        font-size: 16px;
-        font-weight: bold;
+    .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
     }
 
-    .blok-header-logo {
-        margin-left: auto;
+    .burger-menu.show{
+        display: flex;
+        justify-content: center;
+
+
+    }
+    .main-menu.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .blok-header-data {
-        margin-right: auto;
+    .main-menu.show li {
+        margin: 10px 0;
+        border-right: none;
+        padding: 0;
     }
+
 }
 
-@media screen and (max-width: 1024px) {
-    .blok-header-logo {
-        margin-left: 40px;
-    }
 
-    .blok-header-data {
-        margin-right: 40px;
-    }
-}
+
+
+
