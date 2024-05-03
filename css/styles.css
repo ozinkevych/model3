@@ -1,3 +1,12 @@
+ul, ol {
+    list-style: none; /* Видаляємо маркери списків */
+    padding: 0; /* Видаляємо внутрішні відступи */
+    margin: 0; /* Видаляємо зовнішні відступи */
+}
+a,p {
+    text-decoration: none;
+    color: dimgrey;/* Видалення підкреслення */
+}
 html, body {
     width: 100%;
     height: 100%;
@@ -25,13 +34,13 @@ body {
 .blok-header-logo {
     display: flex;
     align-items: center;
-    margin-left: 110px;
+    margin-left: 20px;
 }
 
 .blok-header-data {
     display: flex;
     margin-top: 40px;
-    margin-right: 110px;
+    margin-right: 50px;
 }
 .blok-header-logo{
     display: flex;
@@ -56,7 +65,6 @@ body {
     margin: 15px 0;
 }
 .tel a{
-    text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     color: dimgrey;
     font-size: 38px;
@@ -65,7 +73,6 @@ body {
     text-align: right;
 }
 .tel-text-line {
-    text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     color: dimgrey;
     display: inline;
@@ -89,21 +96,13 @@ body {
     padding: 0px 10px
 }
 
-.main-menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-}
-
-.main-menu li {
+.main-menu li{
     position: relative;
     display: inline-block;
     margin: 0 10px;
 }
 
 .main-menu li a{
-    text-decoration: none;
     font-family: 'PT Sans', sans-serif;
     color: white;
     font-size: 24px;
@@ -159,96 +158,172 @@ body {
     max-width: 100%;
     height: auto;
 }
-@media screen and (max-width: 1024px) {
-    .blok-header-logo{
-        margin-left: 40px;
-    }
-    .blok-header-data{
-        margin-right: 40px;
-    }
-
+/* Контент */
+.container-content{
+    max-width: 980px;
+    height: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+}
+/* Категорія */
+.category-list li{
+    position: relative;
+    display: inline-block;
+}
+.category-list li:not(:last-child)::after {
+    content: " / ";
+    margin: 5px;
+}
+.category-list li:not(:last-child) a {
+    text-decoration: underline;
+}
+    /* Ліве меню */
+.catalog {
+    display: flex;
 }
 
-@media screen and (max-width: 768px) {
-    .header-background{
-        height: auto;
-        flex-direction: column;
-        padding: 0px;
-        margin: 10px;
-    }
-    .menu-background {
-        padding: 10px;
-        height: auto;
-        flex-direction: column;
-    }
-    .blok-header-logo,
-    .blok-header-data {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-    .tel a {
-        font-size: 34px;
-    }
-    .main-menu {
+.leftblock {
+    width: 250px;
+}
+
+.centerblock {
+    width: 730px;
+}
+    .subcategory-list {
         display: none;
+        top: 100%;
+
     }
-    /* Показуємо бургер-меню на менших екранах */
-    .burger-menu {
+    .category-item:hover .subcategory-list {
         display: block;
-        cursor: pointer;
-        justify-content: center;
+    }
+    .leftblock-category-list > li > a:hover{
 
+        font-size: 20px;
+    }
+    .subcategory-list {
+        list-style: disc; /* Форма маркера */
+        margin-left: 20px; /* Відступ для зручності */
+    }
+    .subcategory-list > li >a:hover{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .leftblock-category-list li a{
+        font-size: 16px;
     }
 
-    .burger-icon {
-        width: 30px;
-        height: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: auto;
-
-    }
-
-    .bar {
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-    }
-
-    .burger-menu.show{
-        display: flex;
-        justify-content: center;
-
-
-    }
-    .main-menu.show {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-menu.show li {
-        margin: 10px 0;
-        border-right: none;
-        padding: 0;
-    }
-    .slide-overlay{
-       padding: 20px;
-    }
-    .slide-overlay img {
-        width: 60%;
-        height: auto;
-
-    }
-
-
+    /* Товар */
+.img-goods{
+    height: 170px;
+    width: 170px;
 }
+.goods{
+    padding: 25px;
+}
+.container-goods{
+    height: 350px;
+    width: 220px;
+    background-color: lightgray;
+}
+.text-goods{
+    width: 160px;
+}
+.prise{
+    display: flex;
+    align-content: space-between;
+}
+
+
+    @media screen and (max-width: 1024px) {
+        .blok-header-logo{
+            margin-left: 40px;
+        }
+        .blok-header-data{
+            margin-right: 40px;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .header-background{
+            height: auto;
+            flex-direction: column;
+            padding: 0px;
+            margin: 10px;
+        }
+        .menu-background {
+            padding: 10px;
+            height: auto;
+            flex-direction: column;
+        }
+        .blok-header-logo,
+        .blok-header-data {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .tel a {
+            font-size: 34px;
+        }
+        .main-menu {
+            display: none;
+        }
+        /* Показуємо бургер-меню на менших екранах */
+        .burger-menu {
+            display: block;
+            cursor: pointer;
+            justify-content: center;
+
+        }
+
+        .burger-icon {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: auto;
+
+        }
+
+        .bar {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+        }
+
+        .burger-menu.show{
+            display: flex;
+            justify-content: center;
+
+
+        }
+        .main-menu.show {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-menu.show li {
+            margin: 10px 0;
+            border-right: none;
+            padding: 0;
+        }
+        .slide-overlay{
+            padding: 20px;
+        }
+        .slide-overlay img {
+            width: 60%;
+            height: auto;
+
+        }
+    }
+
 
 
 
