@@ -6,6 +6,8 @@ ul, ol {
 a,p {
     text-decoration: none;
     color: dimgrey;/* Видалення підкреслення */
+    margin: 0px;
+    padding: 0px;
 }
 html, body {
     width: 100%;
@@ -180,50 +182,84 @@ body {
     /* Ліве меню */
 .catalog {
     display: flex;
+
 }
 
 .leftblock {
-    width: 250px;
+    width: 200px;
+    margin-top: 20px;
 }
 
 .centerblock {
-    width: 730px;
+    width: 780px;
+
+.container-all-goods{
+    display: flex;
+    flex-wrap: wrap;
 }
-    .subcategory-list {
-        display: none;
-        top: 100%;
+}
+.container-g{
+    margin: 20px 10px 20px 10px;
+}
+.subcategory-list {
+    display: none;
+    top: 100%;
 
-    }
-    .category-item:hover .subcategory-list {
-        display: block;
-    }
-    .leftblock-category-list > li > a:hover{
+}
 
-        font-size: 20px;
-    }
-    .subcategory-list {
-        list-style: disc; /* Форма маркера */
-        margin-left: 20px; /* Відступ для зручності */
-    }
-    .subcategory-list > li >a:hover{
-        text-decoration: underline;
-        font-weight: bold;
-    }
-    .leftblock-category-list li a{
-        font-size: 16px;
-    }
+.leftblock-category-list > li > a:hover{
+    text-decoration: underline;
+    font-size: 20px;
+}
 
+.category-item:hover > a {
+    text-decoration: underline;
+    font-size: 20px;
+}
+.subcategory-list {
+    display: none;
+}
+.category-item:hover > .subcategory-list {
+    display: block;
+}
+.subcategory-list {
+    list-style: disc;
+    margin-left: 20px;
+}
+.subcategory-list > li >a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.leftblock-category-list li a{
+    font-size: 16px;
+    }
+.img-leftblock{
+    display: flex;
+    justify-content: center;
+
+}
+.img-leftblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.prise-img-leftblock{
+    padding: 0px;
+}
     /* Товар */
 .img-goods{
-    height: 170px;
-    width: 170px;
+    height: 190px;
+    width: 190px;
 }
 .goods{
     padding: 25px;
 }
 .container-goods{
-    height: 350px;
-    width: 220px;
+    height: 380px;
+    width: 240px;
     background-color: lightgray;
 }
 .text-goods{
@@ -231,9 +267,50 @@ body {
 }
 .prise{
     display: flex;
-    align-content: space-between;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin: 20px;
+}
+.trash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-prise{
+    font-weight: bold;
+    font-size: 28px;
+}
+/* Пагінація */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 20px;
+    justify-content: center;
+}
+.pagination li{
+    margin-right: 20px;
+    text-align: center;
 }
 
+.pagination > li > a:hover{
+    font-weight: bold;
+    font-size: 20px;
+}
+.separator {
+    margin: 20px 10px 20px 10px;
+}
+/*Інформація*/
+.info {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 280px;
+}
+
+.info > div {
+    flex-basis: 48%; /* Рівномірно розподіляє простір між дочірніми елементами */
+    margin-right: 20px; /* Відступ між колонками */
+}
 
     @media screen and (max-width: 1024px) {
         .blok-header-logo{
@@ -242,7 +319,10 @@ body {
         .blok-header-data{
             margin-right: 40px;
         }
-
+        .container-all-goods{
+            justify-content: center;
+            align-content: center;
+        }
     }
 
     @media screen and (max-width: 768px) {
@@ -322,7 +402,33 @@ body {
             height: auto;
 
         }
+        .container-all-goods,
+        .info{
+            display: flex;
+            flex-direction: column;
+        }
+        .info-col{
+            margin-top: 20px;
+        }
+        .container-leftblock {
+            width: 200px;
+        }
     }
+@media screen and (max-width: 768px) {
+    .catalog{
+        display: flex;
+        flex-direction: column;
+    }
+    .centerblock{
+        max-width: 320px;
+        width: 100%;
+    }
+    .container-all-goods{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+}
 
 
 
