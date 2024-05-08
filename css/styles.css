@@ -162,10 +162,9 @@ body {
 }
 /* Контент */
 .container-content{
-    max-width: 980px;
-    height: 1000px;
-    padding: 10px;
     margin: 0 auto;
+    max-width: 980px;
+    padding: 10px;
 }
 /* Категорія */
 .category-list li{
@@ -286,6 +285,7 @@ body {
     list-style: none;
     padding: 20px;
     justify-content: center;
+    height: 30px;
 }
 .pagination li{
     margin-right: 20px;
@@ -308,8 +308,7 @@ body {
 }
 
 .info > div {
-    flex-basis: 48%; /* Рівномірно розподіляє простір між дочірніми елементами */
-    margin-right: 20px; /* Відступ між колонками */
+    flex-basis: 48%;
 }
 
     @media screen and (max-width: 1024px) {
@@ -320,9 +319,11 @@ body {
             margin-right: 40px;
         }
         .container-all-goods{
-            justify-content: center;
-            align-content: center;
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
         }
+
     }
 
     @media screen and (max-width: 768px) {
@@ -402,33 +403,57 @@ body {
             height: auto;
 
         }
-        .container-all-goods,
-        .info{
-            display: flex;
+        .catalog{
             flex-direction: column;
         }
-        .info-col{
-            margin-top: 20px;
+        .centerblock{
+            max-width: 540px;
+            margin: 0 auto;
         }
-        .container-leftblock {
-            width: 200px;
+        .content{
+            margin: 0px 40px 0px 40px
+        }
+        .leftblock{
+            width: 100%;
+        }
+        .container-leftblock{
+            display: flex;
+            margin: 0px 40px 0px 40px;
+            justify-content: space-between;
+        }
+        .img-leftblock{
+            margin: 0px;
         }
     }
-@media screen and (max-width: 768px) {
-    .catalog{
-        display: flex;
-        flex-direction: column;
-    }
+@media screen and (max-width: 540px) {
     .centerblock{
+        flex-direction: column;
         max-width: 320px;
-        width: 100%;
     }
     .container-all-goods{
-        display: flex;
-        align-content: center;
+        margin: 0 auto;
         justify-content: center;
     }
+    .leftblock{
+        margin: 0px;
+    }
+    .content,.container-leftblock{
+        margin: 10px;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .info-col p {
+        margin-bottom: 20px;
+    }
+    .prise-img-leftblock{
+        font-size: 16px;
+    }
+    .img-left{
+        width: 60px;
+    }
 }
+
 
 
 
