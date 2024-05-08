@@ -9,8 +9,9 @@ a,p {
     margin: 0px;
     padding: 0px;
 }
+
 html, body {
-    width: 100%;
+    min-height: 100vh;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -20,6 +21,10 @@ body {
     font-size: 14px;
     line-height: 22px;
     color: dimgrey;
+
+}
+.slider,menu{
+    flex-grow: 1;
 }
 /* Шапка */
 .header-background {
@@ -304,13 +309,40 @@ body {
     margin: 10px;
     display: flex;
     justify-content: space-between;
-    height: 280px;
 }
 
 .info > div {
     flex-basis: 48%;
 }
+/* Футер */
 
+.blok-footer{
+    overflow: auto;
+    background-color: dimgrey;
+}
+.container-footer{
+    max-width: 980px;
+    padding: 10px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container-footer a{
+    text-decoration: underline;
+}
+.container-footer p,
+.container-footer a,
+.container-footer li a,
+.blok-footer-logo img{
+    color: white;
+    margin-top: 10px;
+}
+.blok-footer-logo{
+    display: flex;
+}
+.blok-footer-logo-text{
+    padding-left: 10px;
+}
     @media screen and (max-width: 1024px) {
         .blok-header-logo{
             margin-left: 40px;
@@ -451,6 +483,16 @@ body {
     }
     .img-left{
         width: 60px;
+    }
+    .container-footer{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .blok-footer-logo,
+    .footer-info,
+    .footer-list{
+        margin: 10px auto;
+
     }
 }
 
