@@ -33,7 +33,7 @@
                         <a href="">+38(095) 758 15 47</a>
                     </div>
                     <div class="tel-text">
-                        <a href="" class="tel-text-line">Зворотній зв'язок</a>
+                        <a href=""  id="openModalBtn"><h3>Зворотній зв'язок</h3></a>
                     </div>
                 </div>
         </div>
@@ -247,6 +247,37 @@
     </div>
         </div>
 </content>
+<feedback>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="s-close">
+                <span class="close">&times;</span>
+            </div>
+            <form class="feedback-form" >
+                <div>
+                    <h1>Зворотній зв'язок</h1>
+                </div>
+                <div>
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я">
+                </div>
+                <div>
+                    <label for="tel">Телефон</label>
+                    <input type="tel" id="tel" name="tel"  required placeholder="Введіть ваш телефон">
+                </div>
+                <div>
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" required   placeholder="Введіть вашу електронну пошту">
+                </div>
+                <div>
+                    <label for="text">Повідомлення</label>
+                    <input type="text" id="text" name="text" required placeholder="Введіть ваше повідомлення">
+                </div>
+                <button class="form-btn" type="submit">НAДІСЛАТИ</button>
+            </form>
+        </div>
+    </div>
+</feedback>
 <footer>
     <div class="blok-footer">
         <div class="container-footer">
@@ -275,6 +306,7 @@
         </div>
     </div>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" >
