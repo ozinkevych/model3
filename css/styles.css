@@ -1,27 +1,24 @@
-ul, ol {
-    list-style: none; /* Видаляємо маркери списків */
-    padding: 0; /* Видаляємо внутрішні відступи */
-    margin: 0; /* Видаляємо зовнішні відступи */
-}
-a,p {
-    text-decoration: none;
-    color: dimgrey;/* Видалення підкреслення */
-    margin: 0px;
-    padding: 0px;
-}
-
-html, body {
-    min-height: 100vh;
-    height: 100%;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     margin: 0;
     padding: 0;
-}
-body {
     font-family: 'PT Sans', sans-serif;
     font-size: 14px;
     line-height: 22px;
     color: dimgrey;
-
+}
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a,p {
+    text-decoration: none;
+    color: dimgrey;
+    margin: 0px;
+    padding: 0px;
 }
 .slider,menu{
     flex-grow: 1;
@@ -37,14 +34,14 @@ body {
     justify-content: space-between;
     height: 250px;
 }
-
 .blok-header-logo {
+    margin-right: auto;
     display: flex;
     align-items: center;
     margin-left: 20px;
 }
-
 .blok-header-data {
+    margin-left: auto;
     display: flex;
     margin-top: 40px;
     margin-right: 50px;
@@ -61,7 +58,6 @@ body {
 .company-name{
     font-weight: bold;
     font-size: 24px;
-
 }
 .tel,
 .tel-text-line {
@@ -72,15 +68,13 @@ body {
     margin: 15px 0;
 }
 .tel a{
-    font-family: 'PT Sans', sans-serif;
     color: dimgrey;
     font-size: 38px;
 }
 .tel-text {
     text-align: right;
 }
-.tel-text-line {
-    font-family: 'PT Sans', sans-serif;
+.tel-text h3{
     color: dimgrey;
     display: inline;
     border-bottom: 1px dashed;
@@ -96,19 +90,16 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .menu-container {
     width: 980px;
     margin: 0 auto;
     padding: 0px 10px
 }
-
 .main-menu li{
     position: relative;
     display: inline-block;
     margin: 0 10px;
 }
-
 .main-menu li a{
     font-family: 'PT Sans', sans-serif;
     color: white;
@@ -118,20 +109,17 @@ body {
     border-right: 2px solid white;
     padding-right: 20px;
 }
-
 .main-menu li:last-child {
     padding-right: 0;
 }
 .burger-menu {
     display: none;
 }
-
 /* Сдайдер */
 .slider {
     width: 100%;
     overflow: hidden;
 }
-
 .slide img {
     margin: 0 auto;
     max-width: 100%;
@@ -156,10 +144,7 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-
-
 }
-
 .prev-slide img,
 .next-slide img {
     max-width: 100%;
@@ -183,24 +168,23 @@ body {
 .category-list li:not(:last-child) a {
     text-decoration: underline;
 }
-    /* Ліве меню */
+/* Ліве меню */
 .catalog {
     display: flex;
-
 }
-
 .leftblock {
+    margin-right: auto;
     width: 200px;
     margin-top: 20px;
 }
-
 .centerblock {
+    position: relative;
     width: 780px;
-
+    margin-left: auto;
+}
 .container-all-goods{
     display: flex;
     flex-wrap: wrap;
-}
 }
 .container-g{
     margin: 20px 10px 20px 10px;
@@ -208,7 +192,6 @@ body {
 .subcategory-list {
     display: none;
     top: 100%;
-
 }
 
 .leftblock-category-list > li > a:hover{
@@ -315,8 +298,8 @@ body {
     flex-basis: 48%;
 }
 /* Футер */
-
 .blok-footer{
+    bottom: 0;
     overflow: auto;
     background-color: dimgrey;
 }
@@ -391,18 +374,20 @@ body {
     justify-content: center;
 
 }
-.feedback-form input[type="text"],
-.feedback-form input[type="tel"],
-.feedback-form input[type="email"]{
+.feedback-form input{
     width: 250px;
     height: 30px;
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid darkgrey;
 }
-.feedback-form input[name="text"]{
+.feedback-form textarea {
     width: 250px;
     height: 90px;
+    padding: 10px;
+    border: 1px solid darkgrey;
+    resize: none;
+
 }
 .feedback-form div label{
     margin: 0 auto;
@@ -416,6 +401,29 @@ body {
     color: white;
 }
 /*Валідація*/
+.feedback-form input:invalid:focus,
+.feedback-form textarea:invalid:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.feedback-form input:invalid::placeholder,
+.feedback-form textarea:invalid::placeholder {
+    color: white;
+}
+
+.feedback-form:invalid input:focus:invalid,
+.feedback-form:invalid textarea:focus:invalid {
+    border-color: rgba(255, 0, 0, 0.3);
+    box-shadow: inset 0 0 5px 2px rgba(255, 0, 0, 0.3);
+}
+
+.feedback-form:invalid input:focus:invalid::placeholder,
+.feedback-form:invalid textarea:focus:invalid::placeholder {
+    color: rgba(255, 0, 0, 0.3);
+    font-style: italic;
+}
+
 
 @media screen and (max-width: 1024px) {
         .blok-header-logo{
@@ -431,6 +439,11 @@ body {
         }
 
     }
+@media only screen and (max-width: 600px) {
+    .subcategory-list {
+        display: none;
+    }
+}
 
     @media screen and (max-width: 768px) {
         .header-background{
@@ -464,7 +477,6 @@ body {
             display: block;
             cursor: pointer;
             justify-content: center;
-
         }
 
         .burger-icon {
@@ -474,20 +486,15 @@ body {
             flex-direction: column;
             justify-content: space-between;
             margin: auto;
-
         }
-
         .bar {
             width: 100%;
             height: 3px;
             background-color: #fff;
         }
-
         .burger-menu.show{
             display: flex;
             justify-content: center;
-
-
         }
         .main-menu.show {
             display: flex;
@@ -495,7 +502,6 @@ body {
             align-items: center;
             justify-content: center;
         }
-
         .main-menu.show li {
             margin: 10px 0;
             border-right: none;
@@ -507,7 +513,6 @@ body {
         .slide-overlay img {
             width: 60%;
             height: auto;
-
         }
         .catalog{
             flex-direction: column;
@@ -529,6 +534,15 @@ body {
         }
         .img-leftblock{
             margin: 0px;
+        }
+        .category-item.mobile-click > .subcategory-list {
+            display: none;
+        }
+        .category-item.mobile-click.active > .subcategory-list {
+            display: block;
+        }
+        .category-item:active {
+            display: block;
         }
     }
 @media screen and (max-width: 540px) {
@@ -566,7 +580,18 @@ body {
     .footer-info,
     .footer-list{
         margin: 10px auto;
-
+    }
+ .modal-content {
+     width: 280px;
+ }
+    .feedback-form{
+        width: 260px;
+    }
+    .feedback-form input{
+        width: 200px;
+    }
+    .feedback-form textarea {
+        width: 200px;
     }
 }
 
