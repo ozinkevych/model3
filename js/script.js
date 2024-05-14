@@ -1,13 +1,13 @@
-document.getElementById('openModalBtn').addEventListener('click', function(event) {
-    event.preventDefault(); // Заборона перехіду за посиланням (або виконання події за замовчуванням)
+document.getElementById('open-Modal-Btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prohibition of clicking on a link (or executing an event by default)
 
-    // Показати модальне вікно
+    // Show modal window
     document.getElementById('myModal').style.display = 'flex';
 });
 
-// Додати обробник події для закриття модального вікна
+// Add an event handler for closing the modal window
 document.querySelector('.close').addEventListener('click', function() {
-    // Закрити модальне вікно
+    // Close the modal window
     document.getElementById('myModal').style.display = 'none';
 });
 
