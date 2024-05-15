@@ -124,17 +124,30 @@ a,p {
 /* slider */
 .slider {
     width: 100%;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.slick-track{
+    height: 400px;
 }
 
-.slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
+.slide{
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
 }
-.slide {
-    width: 100%;
+
+.img-slide {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    position: relative;
+    transform: translateY(-10%);
+
 }
 .slide-overlay {
     max-width: 980px;
@@ -149,6 +162,7 @@ a,p {
     align-items: center;
     padding: 100px;
 }
+
 .prev-slide,
 .next-slide {
     background: none;
@@ -156,6 +170,7 @@ a,p {
     cursor: pointer;
     padding: 0;
 }
+
 .prev-slide img,
 .next-slide img {
     max-width: 100%;
@@ -415,7 +430,7 @@ a,p {
     background-color: dimgrey;
     color: white;
 }
-/*Валідація*/
+/*validation*/
 .feedback-form input:invalid:focus,
 .feedback-form textarea:invalid:focus {
     outline: none;
@@ -438,6 +453,9 @@ a,p {
 
 
 @media screen and (max-width: 1024px) {
+        .slick-track{
+            height: 100%
+        }
         .block-header-logo{
             margin-left: 40px;
         }
@@ -521,6 +539,9 @@ a,p {
         }
         .slide-overlay{
             padding: 20px;
+        }
+        .slider{
+            height: 100%;
         }
         .slide-overlay img {
             width: 60%;

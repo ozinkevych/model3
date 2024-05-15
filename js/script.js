@@ -14,7 +14,7 @@ document.querySelector('.close').addEventListener('click', function() {
 $(document).ready(function() {
     $('.slider').slick({
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 4000000,
         arrows: false,
         centerMode: true,
         centerPadding: '0',
