@@ -17,8 +17,8 @@ ul, ol {
 a,p {
     text-decoration: none;
     color: dimgrey;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 .slider,menu{
     flex-grow: 1;
@@ -96,7 +96,7 @@ a,p {
 .menu-container {
     width: 980px;
     margin: 0 auto;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 .main-menu li{
     position: relative;
@@ -263,7 +263,7 @@ a,p {
     font-weight: bold;
 }
 .prise-img-left-block{
-    padding: 0px;
+    padding: 0;
 }
     /* goods */
 .img-goods{
@@ -343,9 +343,10 @@ a,p {
 }
 .container-footer p,
 .container-footer a,
-.container-footer li a,
+.container-footer li,
 .block-footer-logo img{
     color: white;
+    margin-top: 5px;
 }
 .block-footer-logo{
     display: flex;
@@ -436,17 +437,20 @@ a,p {
     outline: none;
     box-shadow: none;
 }
-
-.feedback-form input:invalid::placeholder{
+.feedback-form input:valid:focus,
+.feedback-form textarea:valid:focus {
+    outline: none;
+    box-shadow: none;
+}
+.feedback-form input::placeholder {
     color: white;
 }
-
-.feedback-form:invalid input:focus:invalid{
+.feedback-form.invalid input:invalid {
     border-color: rgba(255, 0, 0, 0.3);
     box-shadow: inset 0 0 5px 2px rgba(255, 0, 0, 0.3);
 }
 
-.feedback-form:invalid input:focus:invalid::placeholder {
+.feedback-form.invalid input:invalid::placeholder {
     color: rgba(255, 0, 0, 0.3);
     font-style: italic;
 }
@@ -479,7 +483,7 @@ a,p {
         .header-background{
             height: auto;
             flex-direction: column;
-            padding: 0px;
+            padding: 0;
             margin: 10px;
         }
         .menu-background {
@@ -555,18 +559,18 @@ a,p {
             margin: 0 auto;
         }
         .content {
-            margin: 0px 40px 0px 40px;
+            margin: 0 40px 0 40px;
         }
         .left-block{
             width: 100%;
         }
         .container-left-block{
             display: flex;
-            margin: 0px 40px 0px 40px;
+            margin: 0 40px 0 40px;
             justify-content: space-between;
         }
         .img-left-block{
-            margin: 0px;
+            margin: 0;
         }
         .category-item.mobile-click > .subcategory-list {
             display: none;
@@ -591,7 +595,7 @@ a,p {
      height: 220px;
     }
     .left-block{
-        margin: 0px;
+        margin: 0;
     }
     .content,.container-left-block{
         margin: 10px;
