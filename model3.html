@@ -30,7 +30,7 @@
         <div class="block-header-data">
                 <div class="block-data" >
                     <div class="tel">
-                        <a href="tel:+38(050) 325 17 45" >+38(050) 325 17 45</a>
+                        <a href="tel:+38(050) 325 17 45">+38(050) 325 17 45</a>
                     </div>
                     <div class="tel">
                         <a href="tel:+38(095) 758 15 47">+38(095) 758 15 47</a>
@@ -258,11 +258,11 @@
                 </div>
                 <div>
                     <label for="name">Ім'я*</label>
-                    <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я">
+                    <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я" pattern="[А-Яа-яA-Za-zЁёІіЇїҐґЄє]*" title="Дозволяється тільки кирилиця та латиниця">
                 </div>
                 <div>
                     <label for="tel">Телефон*</label>
-                    <input type="tel" id="tel" name="tel" required placeholder="Введіть ваш телефон">
+                    <input type="tel" id="tel" name="tel" required placeholder="Введіть ваш телефон" pattern="[0-9]*" minlength="10">
                 </div>
                 <div>
                     <label for="email">Електронна пошта*</label>

@@ -23,18 +23,18 @@ $(document).ready(function () {
         swipe: false,
         swipeToSlide: true,
     });
-    $('.prev-slide, .next-slide').click(function () {
-        $('.slider').slick('slickPlay');
-    });
+
     $('.prev-slide').click(function () {
         $('.slider').slick('slickPrev');
     });
 
     $('.next-slide').click(function () {
-        $('.slider').slick('slickNext');
+        $('.slider').slick('slickPrev');
     });
 
-
+    $('.prev-slide, .next-slide').click(function () {
+        $('.slider').slick('slickPlay');
+    });
 });
 
 
