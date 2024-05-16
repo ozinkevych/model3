@@ -258,11 +258,11 @@
                 </div>
                 <div>
                     <label for="name">Ім'я*</label>
-                    <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я" pattern="[А-Яа-яA-Za-zЁёІіЇїҐґЄє]*" title="Дозволяється тільки кирилиця та латиниця">
+                    <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я" pattern="[А-Яа-яA-Za-zЁёІіЇїҐґЄє]*" minlength="4" maxlength="30">
                 </div>
                 <div>
                     <label for="tel">Телефон*</label>
-                    <input type="tel" id="tel" name="tel" required placeholder="Введіть ваш телефон" pattern="[0-9]*" minlength="10">
+                    <input type="tel" id="tel" name="tel" required placeholder="Введіть ваш телефон" pattern="[0-9]*" minlength="10" maxlength="10">
                 </div>
                 <div>
                     <label for="email">Електронна пошта*</label>
